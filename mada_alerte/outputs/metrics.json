@@ -1,0 +1,36 @@
+{
+ "auteur": "Judicaël",
+ "email": "businessj49@gmail.com",
+ "seuil_mm": 30.0,
+ "n_exemples": 64176,
+ "n_villes": 12,
+ "periode": [
+  "2012-01-30",
+  "2026-09-20"
+ ],
+ "taux_alerte": 0.0187,
+ "test": {
+  "LR": {
+   "seuil": 0.895,
+   "roc_auc": 0.8992,
+   "pr_auc": 0.247,
+   "precision": 0.2353,
+   "rappel": 0.4303,
+   "f1": 0.3042
+  },
+  "HG": {
+   "seuil": 0.887,
+   "roc_auc": 0.9109,
+   "pr_auc": 0.2248,
+   "precision": 0.2765,
+   "rappel": 0.3227,
+   "f1": 0.2978
+  }
+ },
+ "persistance": {
+  "precision": 0.2767,
+  "rappel": 0.2789,
+  "f1": 0.2778
+ },
+ "hasard_pr_auc": 0.021
+}
