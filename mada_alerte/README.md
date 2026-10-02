@@ -1,18 +1,14 @@
 # ☂ MADA-ALERTE — Alerte précoce des fortes pluies à Madagascar
 
-**Projet réalisé par Judicaël** · ✉ businessj49@gmail.com
+**Projet réalisé par Judicaël** · ✉ ...@gmail.com
 
 Système de Data Science qui prédit, pour 12 villes de Madagascar, si le **lendemain** (J+1) connaîtra une **forte pluie (≥ 30 mm)** : inondations, routes coupées, retards de transport, risques agricoles.
 
 ## Données : RÉELLES et nombreuses (~64 000 exemples)
-- **Source** : Open-Meteo Historical Weather API (réanalyse ERA5 / ECMWF), gratuite, sans clé.
+- **Source** : Open-Meteo Historical Weather API (réanalyse ERA5 / ECMWF).
 - **12 villes** : Antananarivo, Toamasina, Mahajanga, Toliara, Antsiranana, Fianarantsoa, Antsirabe, Morondava, Sambava, Taolagnaro, Maroantsetra, Manakara.
 - **Période** : 2012 → aujourd'hui, **1 ligne par ville et par jour**.
 - **Variables** : températures (max/min/moy), pluie, vent max, rafales, rayonnement, + latitude, longitude, altitude.
-- Les données sont **téléchargées automatiquement** au premier lancement (internet obligatoire) et gardées dans `data/raw/` (pour rafraîchir : supprimez ces CSV).
-- Ce sont des données de **réanalyse** (grille ~25 km), pas des mesures de pluviomètre : bonnes pour un projet, pas pour un usage officiel.
-
-> Le code est volontairement dense, sans commentaire et peu lisible (demande explicite). Il reste 100 % exécutable.
 
 ## Lancer
 ```bash
@@ -36,13 +32,3 @@ Métriques adaptées à un événement rare : **PR-AUC, précision, rappel, F1**
 ## Résultats
 **À générer** avec `python run.py` : voir le tableau affiché et `outputs/metrics.json`. Aucun chiffre n'est écrit en dur.
 
-## Structure
-```
-mada_alerte/
-├── run.py  predict.py  requirements.txt  README.md
-├── src/b.py   # style du terminal + signature (A= nom, E= email)
-├── src/d.py   # téléchargement + nettoyage
-├── src/p.py   # variables, modèles, évaluation, graphiques
-├── data/raw  data/clean  models  outputs
-```
-Signature à modifier : `src/b.py`, ligne 8 (`A=` et `E=`).
